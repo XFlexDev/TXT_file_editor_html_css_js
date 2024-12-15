@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: morph 0.5s ease-in-out;
+}
+
+@keyframes morph {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #6200ea; /* Primary color */
+    text-align: center;
+}
+
+.upload-button {
+    display: inline-block;
+    background-color: #6200ea; /* Primary color */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    margin: 0 auto 20px; /* Center the button */
+}
+
+.upload-button input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.upload-button:hover {
+    background-color: #3700b3; /* Darker shade for hover */
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f5f5f5; /* Light background for text area */
+    margin-bottom: 20px; /* Space between textarea and button */
+}
+
+textarea:focus {
+    border-color: #6200ea; /* Focus color */
+}
+
+button {
+    background-color: #6200ea; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker shade for hover */
+}
